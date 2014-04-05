@@ -1,0 +1,33 @@
+#the profile
+source ~/.profile
+# general path munging
+PATH=${PATH}:/usr/local/bin
+PATH=${PATH}:/usr/bin
+
+PATH=${PATH}:~/bin
+
+# set sublime as std editor
+# export EDITOR='subl -w'
+
+# aliases
+# the cd command error
+alias cd..="cd .."
+# shorten history
+alias h=history
+# move faster to the desktop
+alias desk="cd ~/Desktop"
+# add interactive to rm
+alias rm="rm -i"
+# open current terminal in finder window
+alias f='open -a Finder ./'
+
+# syntax coloring
+export CLICOLOR=1
+export LSCOLORS=Ahfxcxdxbxegedabagacad
+
+# cd to the path of the front Finder window
+# http://brettterpstra.com/2013/02/09/quick-tip-jumping-to-the-finder-location-in-terminal/
+cdf() {
+    target=`osascript -e 'tell application "Finder" to get POSIX path of (target of front Finder window as text)'`
+    cd "$target"
+}
