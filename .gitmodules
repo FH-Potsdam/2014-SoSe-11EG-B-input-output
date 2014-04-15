@@ -1,0 +1,3 @@
+[submodule "setup-tools"]
+	path = setup-tools
+	url = git@github.com:FH-Potsdam/github-setup-tools.git
