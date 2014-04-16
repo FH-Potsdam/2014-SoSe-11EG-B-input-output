@@ -22,7 +22,7 @@ void setup() {
 
   growingLines = new ArrayList<GrowingLine>();
 
-  initialGrowingLine = new GrowingLine(new PVector(width/2, height/2), new PVector(random(2)-1, random(2)-1), 0, 100 );
+  initialGrowingLine = new GrowingLine(new PVector(width/2, height/2), new PVector(random(2)-1, random(2)-1), 0, 100, null );
   growingLines.add(initialGrowingLine);
 
   smooth();
@@ -38,13 +38,9 @@ void draw () {
 void updateGrowingLines() {
   ArrayList<GrowingLine> newLinesFromLines = new ArrayList<GrowingLine>();
 
-  loadPixels();
-
   for (GrowingLine gLine : growingLines) {
     gLine.update();
     gLine.display();
-
-    updatePixels();
 
     if ( gLine.hasEnded() && !gLine.isDead() ) {
       newLinesFromLines.add(gLine);
@@ -52,17 +48,59 @@ void updateGrowingLines() {
     }
   }
 
+  findAndKillCollidingLines();
+
   for (GrowingLine gLine : newLinesFromLines) {
     createNewLinesFrom(gLine);
   }
 }
 
 void findAndKillCollidingLines() {
-  
+  //println("findAndKillCollidingLines");
+
+  int linesCount = growingLines.size();
+
+  //check for each line, collisions with other lines
+  for (int i = 0; i < linesCount; i++) {
+    GrowingLine gLine = growingLines.get(i);
+
+    //no need to check... is dead already
+    if (gLine.isDead()) {
+      continue;
+    }
+
+    for (int j = 0; j < linesCount; j++) {
+      GrowingLine gLineToCheck = growingLines.get(j);
+
+      //don't check collision with yourself or with your mother
+      if (i == j || gLine.getMother() == gLineToCheck) { 
+        continue;
+      }
+
+      PVector ownPosVect = gLine.getPosVector();
+      PVector startPos = gLineToCheck.getStartPosVector();
+      PVector currentPos = gLineToCheck.getPosVector();
+
+      float a = startPos.dist(currentPos);
+      float b = startPos.dist(ownPosVect);
+      float c = currentPos.dist(ownPosVect);
+
+      //      float a = sqrt( sq(abs(startPosX-currentPosX)) + sq(abs(startPosY-currentPosY)) );
+      //      float b = sqrt( sq(abs(startPosX-ownX)) + sq(abs(startPosY-ownY)) );
+      //      float c = sqrt( sq(abs(currentPosX-ownX)) + sq(abs(currentPosY-ownY)) );
+
+      float distance = sqrt( sq(c) - ( sq( sq(a)+sq(c)-sq(b) ) / ( 4*sq(a) ) ) );
+
+      if (distance < 1) {
+        println(distance);
+        gLine.kill();
+      }
+    }
+  }
 }
 
 void createNewLinesFrom(GrowingLine gLine) {
-  println("createNewLines");
+  //println("createNewLines");
 
   //float angle = random(180);
   float angle = angleAll;
@@ -71,8 +109,7 @@ void createNewLinesFrom(GrowingLine gLine) {
   //float newLength = random(50, 100);
   float newLength = 100;
 
-  //GrowingLine rebornOne = ;
-  growingLines.add( new GrowingLine(gLine.getPosVector(), gLine.getDirectionVector(), angle, newLength ) );
-  growingLines.add( new GrowingLine(gLine.getPosVector(), gLine.getDirectionVector(), counterAngle, newLength ) );
+  growingLines.add( new GrowingLine(gLine.getPosVector(), gLine.getDirectionVector(), angle, newLength, gLine ) );
+  growingLines.add( new GrowingLine(gLine.getPosVector(), gLine.getDirectionVector(), counterAngle, newLength, gLine ) );
 }
 
