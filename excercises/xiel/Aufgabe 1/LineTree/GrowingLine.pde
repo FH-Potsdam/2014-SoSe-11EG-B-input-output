@@ -104,30 +104,12 @@ class GrowingLine {
     || newPosVector.x <= 0
     || newPosVector.y >= height
     || newPosVector.y <= 0
-    //|| usedPixelAhead() 
     ){
       dead = true;
-      println("line hit edge of canvas or used pixel ahead");
+      println("line hit edge of canvas");
     }
   }
-  
-  boolean usedPixelAhead(){
-    int x = round(newPosVector.x);
-    int y = round(newPosVector.y);
-    
-    //get pixel at point
-    color colorOfPixelAhead = pixels[ y * x + x];
-    
-    println( str(colorOfPixelAhead) );
-    println( str(color(255)) );
-    
-    if( colorOfPixelAhead == color(0) ){
-      println("used pixel ahead");
-    }
-    
-    return false;
-    //return colorOfPixelAhead == color(0);
-  }
+
   
   void display(){
     line(oldPosVector.x, oldPosVector.y, newPosVector.x, newPosVector.y);
