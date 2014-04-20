@@ -35,7 +35,15 @@ This repo is 4 the course "Eingabe, Ausgabe. Grundlagen der prozessorientierten 
 
 
 - excercises  
-    + tbd
+    + 01_patternprocedure
+    + 02_tbd
+    + 03_tbd
+
+##Git/Github Training ressources  
+
+[https://help.github.com/articles/what-are-other-good-resources-for-learning-git-and-github](https://help.github.com/articles/what-are-other-good-resources-for-learning-git-and-github)  
+
+[http://training.github.com/kit/](http://training.github.com/kit/)  
 
 ##License  
 
