@@ -5,46 +5,44 @@ Tree myTree;
 
 void setup() {
 
-  size(1280, 720, P3D);
+	size(1280, 720, P3D);
 
-  cam = new PeasyCam(this, 400);
-  cam.setMinimumDistance(500);
-  cam.setMaximumDistance(1500);
-  cam.setDistance(1000);
-  cam.setYawRotationMode();
-  
-  createTree();
+	cam = new PeasyCam(this, 400);
+	cam.setMinimumDistance(500);
+	cam.setMaximumDistance(1500);
+	cam.setDistance(1000);
+	cam.setYawRotationMode();
+	
+	createTree();
 }
 
 void createTree() {
-  
-  //myTree = new Tree(12, 10);
-  myTree = new Tree(9, 20);
+	
+	myTree = new Tree(7, 30);
 }
 
 void draw() {
 
-  background(255);
-  lights();
+	background(255);
+	lights();
 
-  translate(0, 400, 0);
+	translate(0, 400, 0);
 
-  pushMatrix();
-  rotateX(PI/2);
-  stroke(64);
-  noFill();
-  rect(-400, -400, 800, 800);
-  popMatrix();  
+	pushMatrix();
+	rotateX(PI/2);
+	stroke(64);
+	noFill();
+	rect(-400, -400, 800, 800);
+	popMatrix();  
 
-  myTree.update();
-  myTree.paint();
+	myTree.update();
+	myTree.paint();
 }
 
 
 void keyPressed() {
-  
-  if( key == 32 ) {
-    createTree();
-  }
+	
+	if( key == 32 ) {
+		createTree();
+	}
 }
-
