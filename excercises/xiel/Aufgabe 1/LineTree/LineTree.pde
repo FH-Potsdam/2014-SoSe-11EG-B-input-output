@@ -25,10 +25,15 @@ void setup() {
   initialGrowingLine = new GrowingLine(new PVector(width/2, height/2), new PVector(random(2)-1, random(2)-1), 0, 100, null );
   growingLines.add(initialGrowingLine);
 
-  smooth();
+  //frameRate(20);
+  //smooth();
 }
 
-
+void keyPressed() {
+  if(key == 's'){
+    saveFrame("LineTree-#####.png");
+  }
+}
 
 void draw () {
 
@@ -73,7 +78,8 @@ void findAndKillCollidingLines() {
       GrowingLine gLineToCheck = growingLines.get(j);
 
       //don't check collision with yourself or with your mother
-      if (i == j || gLine.getMother() == gLineToCheck) { 
+      if (i == j || gLine.getMother() == gLineToCheck) {
+        println("me or my mother!");
         continue;
       }
 
@@ -85,15 +91,27 @@ void findAndKillCollidingLines() {
       float b = startPos.dist(ownPosVect);
       float c = currentPos.dist(ownPosVect);
 
+      float alpha = degrees( acos( (sq(b)+sq(c)-sq(a)) / (2*a*c) ) );
+
       //      float a = sqrt( sq(abs(startPosX-currentPosX)) + sq(abs(startPosY-currentPosY)) );
       //      float b = sqrt( sq(abs(startPosX-ownX)) + sq(abs(startPosY-ownY)) );
       //      float c = sqrt( sq(abs(currentPosX-ownX)) + sq(abs(currentPosY-ownY)) );
 
+      //check if all angles are <= 90 deg 
+
       float distance = sqrt( sq(c) - ( sq( sq(a)+sq(c)-sq(b) ) / ( 4*sq(a) ) ) );
 
-      if (distance < 1) {
-        println(distance);
-        gLine.kill();
+      println("----");
+      println(distance);
+      println(a + " " + b + " " + c);
+      println("alpha: " + alpha);
+
+      if (distance < 1 && alpha < 45) {
+        println("KILL!");
+//        println(distance);
+//        println(a + " " + b + " " + c);
+//        println(alpha);
+        //gLine.kill();
       }
     }
   }
