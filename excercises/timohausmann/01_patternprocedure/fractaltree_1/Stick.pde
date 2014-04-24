@@ -1,17 +1,21 @@
 class Stick {
   
+  Tree tree;
   PVector rotation;
-  int len;
+  float len;
   float depthFactor;
+  float diameter;
   color colour;  
   ArrayList<Stick> children;
   
   
-  Stick(PVector _rotation, int _len, float _depthFactor) {
+  Stick(Tree _tree, int _depth, PVector _rotation) {
     
+    this.tree = _tree;
     this.rotation = _rotation;
-    this.len = _len;
-    this.depthFactor = _depthFactor;
+    this.len = _depth * _tree.stickLength;
+    this.depthFactor = _depth/float(_tree.depth);
+    this.diameter = this.depthFactor*30;
     
     this.children = new ArrayList<Stick>(); 
     this.colour = color( random(40), ((1-depthFactor)*50) + random(140), random(40) );
@@ -33,7 +37,8 @@ class Stick {
   
   void paint() {
     
-    float diameter = this.depthFactor*30;
+    //float swingZ = radians( sin((frameCount/16.0) % 360)*0.5 );
+    float swingZ = radians( sin((frameCount/32.0) % 360)*0.5 );
     
     stroke(255,64);
     fill(0);
@@ -41,9 +46,9 @@ class Stick {
     pushMatrix();
     rotateX( radians(this.rotation.x) );
     rotateY( radians(this.rotation.y) );
-    rotateZ( radians(this.rotation.z) + radians( sin((frameCount/16.0) % 360)*0.5 ) );
+    rotateZ( radians(this.rotation.z) + swingZ );
     translate(0, -this.len/2, 0);
-    box(diameter, this.len, diameter);
+    box(this.diameter, this.len, this.diameter);
     
     translate(0, -this.len/2, 0);
     
