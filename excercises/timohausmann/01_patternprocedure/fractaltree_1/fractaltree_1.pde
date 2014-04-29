@@ -2,6 +2,8 @@ import peasy.*;
 
 PeasyCam cam;
 Tree myTree;
+String name;
+PFont font;
 
 void setup() {
 
@@ -13,12 +15,15 @@ void setup() {
 	cam.setDistance(1000);
 	cam.setYawRotationMode();
 	
+	name = "";
+	font = createFont("Courier New", 16);
+
 	createTree();
 }
 
 void createTree() {
 	
-	myTree = new Tree(7, 30);
+	myTree = new Tree();
 }
 
 void draw() {
@@ -33,16 +38,61 @@ void draw() {
 	stroke(64);
 	noFill();
 	rect(-400, -400, 800, 800);
-	popMatrix();  
+	popMatrix();
 
 	myTree.update();
 	myTree.paint();
+
+	drawHud();
+}
+
+void drawHud() {
+
+	String drawText = name;
+	color drawColor = color(0);
+
+	if( name.length() == 0 ) {
+		drawText = "Bitte gib deinen Namen ein";
+		drawColor = color(128 + sin((frameCount/16.0) % 360)*64  );
+	}
+
+	cam.beginHUD();
+
+	fill(drawColor);
+	noStroke();
+	textFont(font);
+	textAlign(CENTER);
+	text(drawText, width/2, height-42);
+
+	cam.endHUD();
 }
 
 
-void keyPressed() {
-	
-	if( key == 32 ) {
-		createTree();
+void keyReleased() {
+
+	if (key != CODED) {
+		switch(key) {
+			case BACKSPACE:
+
+				name = name.substring(0,max(0,name.length()-1));
+				myTree.removeDepth();
+				break;
+			default:
+
+				//constrain to A-Z & SPACE
+				if((keyCode >= 65 && keyCode <= 90) || keyCode == 32 ) {
+					name += key;
+
+					float degree = 45;
+					float lenModifier = 1;
+					float diameterModifier = 1;
+
+					if( keyCode != 32 ) {
+						degree = map(keyCode, 65, 90, 15, 60);
+					}
+
+					myTree.addDepth( degree );
+				}
+		}
 	}
 }
