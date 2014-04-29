@@ -4,6 +4,9 @@ class Stick extends Node {
 	PVector targetRotation;
 	PVector dimensions;
 	PVector targetDimensions;
+
+	float diameterModifier;
+	float lenModifier;
 	
 	
 	Stick(Tree _tree, int _depth, PVector _rotation) {
@@ -15,12 +18,11 @@ class Stick extends Node {
 		
 		this.rotation = new PVector(0, 0, 0);
 		this.targetRotation = _rotation;
+
+		this.diameterModifier = 1;
+		this.lenModifier = random(0.5, 1);
 	}
 
-	void setRotation( PVector _rotation ) {
-
-		this.rotation = _rotation;
-	}
 
 	void update() {
 
@@ -31,6 +33,9 @@ class Stick extends Node {
 
 		float len = map(this.depthFactor, 0, 1, stickLength, stickLength/4.0 );
 		float diameter = map(this.depthFactor, 0, 1, stickDiameter, stickDiameter/4.0 );
+
+		diameter *= this.diameterModifier;
+		len *= this.lenModifier;
 
 		this.targetDimensions.x = diameter;
 		this.targetDimensions.y = len;
@@ -47,6 +52,20 @@ class Stick extends Node {
 		this.rotation.add( deltaRotation );
 	}
 	
+
+	void randomizeRotation() {
+
+		int sign = this.targetRotation.z < 0 ? -1 : 1;
+
+		this.targetRotation.z = random(15, 45) * sign;
+
+		for(int i=0;i<this.children.size();i++) {
+
+			this.children.get(i).randomizeRotation();
+		}
+	}
+
+
 	void paint() {
 		
 		float swingZ = radians( sin((frameCount/32.0) % 360)*0.5 );
@@ -63,7 +82,6 @@ class Stick extends Node {
 		box(this.dimensions.x, this.dimensions.y, this.dimensions.z);
 		
 		translate(0, -this.dimensions.y/2, 0);
-		
 		
 		for(int i=0;i<this.children.size();i++) {
 			this.children.get(i).paint();

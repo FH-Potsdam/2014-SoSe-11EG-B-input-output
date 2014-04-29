@@ -40,4 +40,8 @@ class Node {
 			this.children.get(i).paint();
 		}
 	}
+
+	void randomizeRotation() {
+		//jesus christ ...
+	}
 }
