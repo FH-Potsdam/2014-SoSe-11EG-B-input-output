@@ -4,8 +4,6 @@
  * zeichne eine gerade Linie
  * am Ende der Linie entspringen zwei neue Linien
  * am Ende dieser Linien entspringen wieder neue Linien, usw. halte dabei den ursprünglichen Spreitzwinkel bei
- 
- 
  */
 
 ArrayList<GrowingLine> growingLines;
@@ -13,37 +11,57 @@ ArrayList<GrowingLine> growingLines;
 GrowingLine initialGrowingLine;
 
 float angleAll;
-boolean savedFrame;
 
 void setup() {
-	size(1024, 786, P2D);
+	size(displayWidth, displayHeight);
+	
+	//size(1200, 848, P2D);
 	background(255);
 
-	savedFrame = false;
 	angleAll = random(180);
 
 	growingLines = new ArrayList<GrowingLine>();
-
 	initialGrowingLine = new GrowingLine(new PVector(width/2, height/2), new PVector(random(2)-1, random(2)-1), 0, 100, null );
 	growingLines.add(initialGrowingLine);
-
-	//frameRate(20);
-	//smooth();
 }
 
-void keyPressed() {
+boolean sketchFullScreen() {
+  return true;
+}
+
+void restartLines() {
+
+	String timestamp = year() + nf(month(),2) + nf(day(),2) + "-" + nf(hour(),2) + nf(minute(),2) + nf(second(),2);
+	saveFrame("frame/LineTree-"+ timestamp +"-"+ angleAll +"-#####.png");
+
+	//translucent hide of old lines
+	fill(255, 255/1.5);
+	rect(0, 0, width, height);
+
+	angleAll = random(180);
+	growingLines = new ArrayList<GrowingLine>();
+	initialGrowingLine = new GrowingLine(new PVector(width/2, height/2), new PVector(random(2)-1, random(2)-1), 0, 100, null );
+	growingLines.add(initialGrowingLine);
+}
+
+void keyReleased() {
 	if (key == 's') {
-		saveFrame("LineTree-#####.png");
+		String timestamp = year() + nf(month(),2) + nf(day(),2) + "-" + nf(hour(),2) + nf(minute(),2) + nf(second(),2);
+		saveFrame("frame/LineTree-"+ timestamp +"-"+ angleAll +"-#####.png");
+	}
+	if(key == RETURN || key == ENTER){
+		restartLines();
 	}
 }
 
 void draw () {
-
 	updateGrowingLines();
 }
 
 void updateGrowingLines() {
 	ArrayList<GrowingLine> newLinesFromLines = new ArrayList<GrowingLine>();
+
+	int livingLinesCount = 0;
 
 	for (GrowingLine gLine : growingLines) {
 		gLine.update();
@@ -60,13 +78,25 @@ void updateGrowingLines() {
 	for (GrowingLine gLine : newLinesFromLines) {
 		createNewLinesFrom(gLine);
 	}
+
+	//check for living lines
+	for (GrowingLine gLine : growingLines) {
+		if (!gLine.hasEnded() && !gLine.isDead()) {
+			livingLinesCount++;
+		}
+	}
+
+	//if all are dead... restartLines!
+	if(livingLinesCount == 0){
+		println("all lines dead, restart!");
+		restartLines();
+	}
 }
 
 void findAndKillCollidingLines() {
 	//println("findAndKillCollidingLines");
 
 	int linesCount = growingLines.size();
-	int livingLinesCount = 0;
 
 	//check for each line, collisions with other lines
 	for (int i = 0; i < linesCount; i++) {
@@ -75,8 +105,6 @@ void findAndKillCollidingLines() {
 		//no need to check... is dead already
 		if (gLine.isDead()) {
 			continue;
-		} else {
-			livingLinesCount++;
 		}
 
 		for (int j = 0; j < linesCount; j++) {
@@ -130,10 +158,6 @@ void findAndKillCollidingLines() {
 			}
 		}
 	}
-
-	if(livingLinesCount == 0 && savedFrame ==  false){
-		saveFrame();
-	}
 }
 
 void createNewLinesFrom(GrowingLine gLine) {
@@ -145,6 +169,8 @@ void createNewLinesFrom(GrowingLine gLine) {
 
 	//float newLength = random(50, 100);
 	float newLength = 100;
+
+	println("new line! angle: " + angle);
 
 	growingLines.add( new GrowingLine(gLine.getPosVector(), gLine.getDirectionVector(), angle, newLength, gLine ) );
 	growingLines.add( new GrowingLine(gLine.getPosVector(), gLine.getDirectionVector(), counterAngle, newLength, gLine ) );
