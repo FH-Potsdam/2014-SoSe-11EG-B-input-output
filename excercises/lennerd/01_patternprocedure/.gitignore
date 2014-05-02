@@ -1,3 +1,5 @@
+/.idea
 /processing-core.jar
 /processing-pdf.jar
 /itext.jar
+/version*.pdf
