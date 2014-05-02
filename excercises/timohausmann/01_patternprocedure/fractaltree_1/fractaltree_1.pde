@@ -1,7 +1,21 @@
+/*
+ * Fractaltree
+ * @version 1.0
+ * @author Timo Hausmann
+ * @license MIT
+ * https://github.com/FH-Potsdam/2014-SoSe-11EG-B-input-output/tree/master/excercises/timohausmann/01_patternprocedure/fractaltree_1
+ */
+
 import peasy.*;
 
 PeasyCam cam;
 Tree myTree;
+int maxNameLength;
+String name;
+PFont font;
+float sceneRotation;
+float sceneRotationDelta;
+
 
 void setup() {
 
@@ -12,14 +26,26 @@ void setup() {
 	cam.setMaximumDistance(1500);
 	cam.setDistance(1000);
 	cam.setYawRotationMode();
+
+	maxNameLength = 6;
 	
+	sceneRotation = 0;
+	sceneRotationDelta = 0.1;
+	
+	name = "";
+	font = createFont("Courier New", 16);
+
+	randomSeed(1000);
+
 	createTree();
 }
 
+
 void createTree() {
 	
-	myTree = new Tree(7, 30);
+	myTree = new Tree();
 }
+
 
 void draw() {
 
@@ -27,22 +53,134 @@ void draw() {
 	lights();
 
 	translate(0, 400, 0);
+	rotateY( radians(sceneRotation) );
 
 	pushMatrix();
 	rotateX(PI/2);
 	stroke(64);
 	noFill();
 	rect(-400, -400, 800, 800);
-	popMatrix();  
+	popMatrix();
 
 	myTree.update();
 	myTree.paint();
+
+	sceneRotation += sceneRotationDelta;
+
+	drawHud();
 }
 
 
-void keyPressed() {
+void drawHud() {
+
+	String drawText = name;
+	String cursorName = " ";
 	
-	if( key == 32 ) {
-		createTree();
+	if( frameCount/32 % 2 == 0 ) {
+		cursorName = "█";
 	}
+
+	cam.beginHUD();
+
+	noStroke();
+	textFont(font);
+	textAlign(CENTER);
+
+	fill(128);
+	text("Bitte gib deinen Namen ein:", width/2, height-64);
+
+	fill(0);
+	text(name + cursorName, width/2, height-42);
+
+	cam.endHUD();
+}
+
+
+void mousePressed() {
+
+	sceneRotationDelta = 0;
+}
+
+
+void mouseReleased() {
+
+	sceneRotationDelta = 0.1;
+}
+
+
+void keyReleased() {
+
+	if (key != CODED) {
+		switch(key) {
+
+			case ENTER:
+
+				screenshot();
+				break;
+
+			case BACKSPACE:
+
+				name = name.substring(0,max(0,name.length()-1));
+
+				updateSeed();
+
+				//Sonderfall für lange Namen - Drehungen neu generieren und abbrechen
+				if( name.length() > maxNameLength-1 ) {
+
+					myTree.randomizeRotation();
+					return;
+				}
+
+				myTree.removeDepth();
+
+				//Sonderfall für kurze Namen - die ersten 2 Buchstaben erzeugen eine zusätzliche Generation
+				if( name.length() < 3 ) myTree.removeDepth();
+
+				break;
+
+			default:
+
+				//Begrenzung auf A-Z & SPACE
+				if((keyCode >= 65 && keyCode <= 90) || keyCode == 32 ) {
+
+					name += key;
+
+					updateSeed();
+
+					//Sonderfall für lange Namen - Drehungen neu generieren und abbrechen
+					if( name.length() > maxNameLength ) {
+
+						myTree.randomizeRotation();
+						return;
+					}
+
+					myTree.addDepth(false);
+
+					//Sonderfall für kurze Namen - die ersten 2 Buchstaben erzeugen eine zusätzliche Generation
+					if( name.length() < 3 ) myTree.addDepth(false);
+				}
+
+				break;
+		}
+	}
+}
+
+
+void updateSeed() {
+
+	int seed = 0;
+
+	for(int i=0; i<name.length(); i++ ) {
+
+		seed += int( name.charAt(i) );
+	}
+
+	randomSeed( seed );
+}
+
+
+void screenshot() {
+
+	String timestamp = year() + nf(month(),2) + nf(day(),2) + "-" + nf(hour(),2) + nf(minute(),2) + nf(second(),2);
+	saveFrame("screenshot-" + name + "-" + timestamp + ".png");
 }
