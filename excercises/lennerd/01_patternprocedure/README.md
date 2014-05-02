@@ -1,5 +1,5 @@
 #Pencils
-Digitale Übersetzung einer analogen Musteranweisung durch Processing.
+Digitale Übersetzung einer analogen Musteranweisung durch Processing. Idee von **Pencils** ist es, ein Spiel von Eigenständigkeit und Inspiration sichtbar zu machen.
 
 ![presentation](documentation/photo1.jpg)<br>
 *Präsentation im Kurs*
@@ -12,7 +12,7 @@ Digitale Übersetzung einer analogen Musteranweisung durch Processing.
 
 ##Musteranweisung
 
-1. Suche ein leeres, an ein angrenzendes, bereits bemaltes Feld heraus.
+1. Suche ein leeres Feld heraus, dass an ein anderes, bereits bemaltes Feld angrenzt.
 
 2. Jede Fläche besteht aus n Stiften mit verschiedener Trägheit und Strichstärke. Jeder Stift malt dabei eine Linie.
 
