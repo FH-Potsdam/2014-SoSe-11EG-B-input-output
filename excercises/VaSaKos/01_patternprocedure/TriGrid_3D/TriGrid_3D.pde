@@ -16,7 +16,6 @@ boolean record;
 void setup()
 {
   size( 1000, 1000, P3D );
-  beginRecord("nervoussystem.obj.OBJExport", "filename.obj");
   background( 0 );
   strokeWeight( 4 );
   stroke( 0, 255, 222);
