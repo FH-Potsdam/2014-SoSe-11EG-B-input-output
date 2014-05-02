@@ -6,7 +6,7 @@ class Tree {
 	int stickDiameter;
 	Stick trunk;
 
-	/*
+	/**
 	 * @var nodeIndex
 	 * Zweidimensionale ArrayList, speichert alle Nodes nach ihrer Tiefe im Baum
 	 * z.B. nodeIndex.get(2) liefert eine ArrayList aller Nodes der 2. Tiefe
@@ -14,6 +14,9 @@ class Tree {
 	ArrayList<ArrayList> nodeIndex;
 	
 
+	/** 
+	 * Constructor
+	 */
 	Tree() {
 
 		//trunk depth
@@ -32,6 +35,10 @@ class Tree {
 	}
 
 
+	/** 
+	 * Eine weitere Verzweigungsebene hinzufügen 
+	 * @param boolean _forceChildren Wenn true, erzwingt zwei Verzweigungen
+	 */
 	void addDepth( boolean _forceChildren ) {
 
 		//letzte Ebene merken
@@ -67,6 +74,9 @@ class Tree {
 	}
 
 
+	/** 
+	 * Alle Nodes der letzten Verzweigungsebene entfernen
+	 */
 	void removeDepth() {
 
 		//mindestens trunk + erste Spaltung
@@ -93,6 +103,9 @@ class Tree {
 		this.depth -= 1;
 	}
 
+	/**
+	 * Drehung aller Nodes ab der ersten Ebene neu generieren
+	 */
 	void randomizeRotation() {
 
 		ArrayList<Stick> splitNodes = this.nodeIndex.get(1);
@@ -103,11 +116,19 @@ class Tree {
 		}
 	}
 	
+
+	/** 
+	 * Update
+	 */
 	void update() {
 		
 		this.trunk.update();
 	}
 
+
+	/** 
+	 * Paint
+	 */
 	void paint() {
 		
 		this.trunk.paint();

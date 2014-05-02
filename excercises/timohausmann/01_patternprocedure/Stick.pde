@@ -1,14 +1,44 @@
 class Stick extends Node {
 	
+	/** 
+	 * @var rotation
+	 * Die aktuelle Drehung
+	 */
 	PVector rotation;
+
+	/** 
+	 * @var targetRotation
+	 * Die eigentliche "Zieldrehung", zu der animiert wird
+	 */
 	PVector targetRotation;
+
+	/** 
+	 * @var dimensions
+	 * Die aktuellen Abmessungen
+	 */
 	PVector dimensions;
+
+	/** 
+	 * @var targetDimensions
+	 * Die eigentlichen "Zielabmessungen", zu denen animiert wird
+	 */
 	PVector targetDimensions;
 
+	/**
+	 * @var diameterModifier
+	 * @var lenModifier
+	 * Diese Faktoren modifizieren den Durchmesser bzw. die Länge
+	 */
 	float diameterModifier;
 	float lenModifier;
 	
 	
+	/** 
+	 * Constructor
+	 * @param Tree _tree der zugehörige Baum
+	 * @param int _depth die Ebenentiefe
+	 * @param PVector _rotation ein dreidimensionaler Vektor mit Grad-Drehungen
+	 */
 	Stick(Tree _tree, int _depth, PVector _rotation) {
 
 		super(_tree, _depth);
@@ -24,6 +54,9 @@ class Stick extends Node {
 	}
 
 
+	/** 
+	 * Update
+	 */
 	void update() {
 
 		super.update();
@@ -53,19 +86,9 @@ class Stick extends Node {
 	}
 	
 
-	void randomizeRotation() {
-
-		int sign = this.targetRotation.z < 0 ? -1 : 1;
-
-		this.targetRotation.z = random(15, 45) * sign;
-
-		for(int i=0;i<this.children.size();i++) {
-
-			this.children.get(i).randomizeRotation();
-		}
-	}
-
-
+	/** 
+	 * Paint
+	 */
 	void paint() {
 		
 		float swingZ = radians( sin((frameCount/32.0) % 360)*0.5 );
@@ -88,5 +111,21 @@ class Stick extends Node {
 		}
 		
 		popMatrix();
+	}
+
+
+	/** 
+	 * neue zufällige Drehung generieren
+	 */
+	void randomizeRotation() {
+
+		int sign = this.targetRotation.z < 0 ? -1 : 1;
+
+		this.targetRotation.z = random(15, 45) * sign;
+
+		for(int i=0;i<this.children.size();i++) {
+
+			this.children.get(i).randomizeRotation();
+		}
 	}
 }

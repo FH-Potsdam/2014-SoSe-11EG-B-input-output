@@ -6,6 +6,11 @@ class Node {
 	ArrayList<Node> children;
 
 
+	/** 
+	 * Constructor
+	 * @param Tree _tree der zugehörige Baum
+	 * @param int _depth die Ebenentiefe
+	 */
 	Node(Tree _tree, int _depth) {
 		
 		this.tree = _tree;
@@ -15,16 +20,29 @@ class Node {
 		this.children = new ArrayList<Node>(); 
 	}
 	
+
+	/** 
+	 * Fügt eine neue ChildNode hinzu
+	 * @param Node _node Die hinzuzufügende ChildNode
+	 */
 	void addChild( Node _node ) {
 		
 		this.children.add( _node );
 	}
 
+
+	/** 
+	 * Entfernt alle ChildNodes
+	 */
 	void removeAllChildren() {
 		
 		this.children.clear();
 	}
 
+
+	/** 
+	 * Update
+	 */
 	void update() {
 
 		this.depthFactor = this.depth/float(this.tree.depth);
@@ -34,6 +52,10 @@ class Node {
 		}
 	}
 	
+
+	/** 
+	 * Paint
+	 */
 	void paint() {
 
 		for(int i=0;i<this.children.size();i++) {
@@ -41,7 +63,10 @@ class Node {
 		}
 	}
 
+
+	/** 
+	 * randomizeRotation
+	 */
 	void randomizeRotation() {
-		//jesus christ ...
 	}
 }

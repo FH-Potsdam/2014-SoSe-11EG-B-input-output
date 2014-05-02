@@ -2,6 +2,12 @@ class Fruit extends Node {
 
 	float diameter;
 
+
+	/** 
+	 * Constructor
+	 * @param Tree _tree der zugehörige Baum
+	 * @param int _depth die Ebenentiefe
+	 */
 	Fruit(Tree _tree, int _depth) {
 
 		super(_tree, _depth);
@@ -10,6 +16,9 @@ class Fruit extends Node {
 	}
 
 
+	/** 
+	 * Paint
+	 */
 	void paint() {
 
 		stroke(0);

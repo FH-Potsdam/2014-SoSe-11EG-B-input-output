@@ -3,7 +3,7 @@
  * @version 1.0
  * @author Timo Hausmann
  * @license MIT
- * https://github.com/FH-Potsdam/2014-SoSe-11EG-B-input-output/tree/master/excercises/timohausmann/01_patternprocedure/fractaltree_1
+ * https://github.com/FH-Potsdam/2014-SoSe-11EG-B-input-output/tree/master/excercises/timohausmann/01_patternprocedure/
  */
 
 import peasy.*;
@@ -17,6 +17,9 @@ float sceneRotation;
 float sceneRotationDelta;
 
 
+/** 
+ * Setup
+ */
 void setup() {
 
 	size(1280, 720, P3D);
@@ -37,16 +40,13 @@ void setup() {
 
 	randomSeed(1000);
 
-	createTree();
-}
-
-
-void createTree() {
-	
 	myTree = new Tree();
 }
 
 
+/** 
+ * Draw
+ */
 void draw() {
 
 	background(255);
@@ -71,6 +71,9 @@ void draw() {
 }
 
 
+/** 
+ * Draw HUD
+ */
 void drawHud() {
 
 	String drawText = name;
@@ -96,18 +99,27 @@ void drawHud() {
 }
 
 
+/** 
+ * Kameradrehung bei MousePressed stoppen
+ */
 void mousePressed() {
 
 	sceneRotationDelta = 0;
 }
 
 
+/** 
+ * Kameradrehung bei MousePressed fortsetzen
+ */
 void mouseReleased() {
 
 	sceneRotationDelta = 0.1;
 }
 
 
+/** 
+ * Tastatureingaben
+ */
 void keyReleased() {
 
 	if (key != CODED) {
@@ -166,6 +178,9 @@ void keyReleased() {
 }
 
 
+/** 
+ * Zufallsseed aktualisieren
+ */
 void updateSeed() {
 
 	int seed = 0;
@@ -179,6 +194,9 @@ void updateSeed() {
 }
 
 
+/** 
+ * Screenshot erstellen
+ */
 void screenshot() {
 
 	String timestamp = year() + nf(month(),2) + nf(day(),2) + "-" + nf(hour(),2) + nf(minute(),2) + nf(second(),2);
