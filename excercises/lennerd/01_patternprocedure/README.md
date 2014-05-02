@@ -1,13 +1,13 @@
 #Pencils
 Digitale Übersetzung einer analogen Musteranweisung durch Processing.
 
-![presentation](documentation/photo1.JPG)<br>
+![presentation](documentation/photo1.jpg)<br>
 *Präsentation im Kurs*
 
-![mockups](documentation/photo2.JPG)<br>
+![mockups](documentation/photo2.jpg)<br>
 *Einsatzmöglichkeiten des Musters*
 
-![closeups](documentation/photo3.JPG)<br>
+![closeups](documentation/photo3.jpg)<br>
 *Version 18 (links) und Version 13 (rechts)*
 
 ##Musteranweisung
@@ -28,7 +28,7 @@ Digitale Übersetzung einer analogen Musteranweisung durch Processing.
 ![ancestors](documentation/ancestor-lines.png)<br>
 *Linien von angrenzenden Feldern werden verfolgt. (Inspiration)*
 
-###Zu Punkt 5
+###Zu Punkt 5: „Inspiration“
 ![ancestors](documentation/layers.png)<br>
 *Gedankliches Model der „Inspiration“.*
 
