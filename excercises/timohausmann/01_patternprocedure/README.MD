@@ -14,8 +14,8 @@ Digitale Variante einer analogen Zeichenanweisung
 * Schritt 5 wurde in der finalen Version weggelassen, ist über die Klasse "Fruit" aber theoretisch möglich
 * Nutzung des dreidimensionalen Raums
 * Parametrisierung durch Namenseingabe
-* * Länge des Namens bestimmt Anzahl der Verzweigungen
-* * Für jeden Namen wird ein einzigartiger Baum generiert
+  * Länge des Namens bestimmt Anzahl der Verzweigungen
+  * Für jeden Namen wird ein einzigartiger Baum generiert
 
 ## Interaktion
 * Namenseingabe: Tastatur
@@ -27,9 +27,8 @@ Digitale Variante einer analogen Zeichenanweisung
 * [PeasyCam](http://mrfeinberg.com/peasycam/)
 
 ## Ressourcen
-* http://rosettacode.org/wiki/Fractal_tree
+* [Fraktalbäume bei Rosettacode](http://rosettacode.org/wiki/Fractal_tree)
 
 ---
 
-Copyright © 2014 Timo Hausmann
-Lizensiert unter der [MIT License](http://opensource.org/licenses/mit-license.php)
+Copyright © 2014 Timo Hausmann | Lizensiert unter der [MIT License](http://opensource.org/licenses/mit-license.php)
