@@ -1,6 +1,5 @@
 
 
-
 //Was geschiecht hier überhaupt?
 // 1.) Uhrzeit XX:XX Aufspalten in ab:cd
 // 2.) d Kreise nach Rechts zeichnen. Mindestens jedoch 4.
