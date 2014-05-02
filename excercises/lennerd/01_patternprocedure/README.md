@@ -37,6 +37,13 @@ Sie dienen gleichzeitig auch als eine Art *Inspiration* für das neu zu bemalend
 indem man angrenzende Felder gedanklich unter das aktuelle Feld legt. Dabei entstehen mehr oder weniger starke Führungslinien,
 die ggf. übernommen werden. So kommt es zu den auffälligen Musterwiederholungen.
 
+##Ausprobieren
+Um den Sketch auszuprobieren, findet ihr unter [`build` eine entsprechnde JAR-Datei,](https://github.com/FH-Potsdam/2014-SoSe-11EG-B-input-output/raw/master/excercises/lennerd/01_patternprocedure/build/01_patternprocedure.jar) die ihr über die Konsole oder im Normalfall auch über den Explorer oder Finder öffnen könnt.
+Diese erstellt euch dann für jeden Durchlauf des Sketches eine Version als PDF, die die 30 verschiedenen Kacheln als Einzelseiten enthält.
+
+**Achtung:** Bricht der Sketch vorher ab, wird auch das Schreiben der PDF abgebrochen. Nur wenn der Sketch alle 30 Felder bemalt hat,
+kann auch die PDF richtig geöffnet werden.
+
 ---
 
 #####@FH Potsdam, WS 2013/2014
