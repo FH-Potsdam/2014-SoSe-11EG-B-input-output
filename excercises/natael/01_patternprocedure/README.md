@@ -118,7 +118,7 @@ void setup() {
 ```
 
 Set size to my resolution, to use as a wallpaper or something like that.
-I rendered later images on my windows maschine and increased the size for printing, to get effective 150 ppi.
+I rendered later images on my windows machine and increased the size for printing, to get effective 150 ppi.
 
 
 
@@ -144,7 +144,7 @@ Called JoonsRenderer constructor function with "this" to initialize the renderer
 Set render-settings for JoonsRenderer.
 setSizeMultiplier is used to get unpixelated lines. in fact it renders the image in the resolution of 2560x1600 and scales it back/down to the viewport.
 
-the uncommented settings could be used instead, but it looked like it worked faster on my maschines.
+the uncommented settings could be used instead, but it looked like it worked faster on my machines.
 
 setSampler("bucket") is another raytrace method. standard-value is ipr.
 setAA is Antialiasing.
@@ -219,7 +219,7 @@ Called lights function, to see a basic shading on the voronoi in the preview-mod
     vertex(z, -z, 1200);
   endShape();
  ```
- 
+
  ```java
   jr.fill("light", 15, 102, 85, 50);
   int o = 50;
