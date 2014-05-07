@@ -19,6 +19,7 @@ Die Parameter der analogen Anweisung waren die Größe der Person sowie der Aspe
 ### Hinweis
 
 Folgende Interaktionen sind möglich:
+
 1. Drücken der Taste **'n'** – *Erzeugung eines neuen Bildes*
 2. Drücken der Taste **'s'** – *Speichern des präsenten Bildes im Sketchordner*
 
