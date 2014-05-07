@@ -14,7 +14,6 @@ Mit diesem Sketch transportiere ich meine individuelle analoge Musteranweisung m
 <br>
 Diese Anweisung entspricht genau dem, was per Processing umgesetzt wurde. Die ursprüngliche Musteranweisung enthielt außerdem persönliche Parameter, die die auszuführende Person miteinzubeziehen hatte. Diese Parameter übernahm ich deswegen nicht in den digitalen Sketch, da ich keinerlei menschliche Interaktion haben wollte und die Zeichnungen somit nur vom Computer durchgeführt werden.
 
-<br>
 Die Parameter der analogen Anweisung waren die Größe der Person sowie der Aspekt der bevorzugten Hand. So sollten persönliche Netze entstehen, die bei jeder Ausführung anders sind. Leider war mir dies aufgrund meiner bisher wenigen Kenntnisse über *Processing* erstmal nicht möglich umzusetzen.
 
 ### Hinweis
