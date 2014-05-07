@@ -11,11 +11,19 @@ ArrayList<GrowingLine> growingLines;
 GrowingLine initialGrowingLine;
 
 float angleAll;
+boolean useVertex = false;
+boolean goFullscreen = false;
+
+float colorHue = 0;
 
 void setup() {
-	size(displayWidth, displayHeight);
+
+	if(goFullscreen){
+		size(displayWidth, displayHeight);
+	} else {
+		size(1200, 848);
+	}
 	
-	//size(1200, 848, P2D);
 	background(255);
 
 	angleAll = random(180);
@@ -26,19 +34,44 @@ void setup() {
 }
 
 boolean sketchFullScreen() {
-  return true;
+  return goFullscreen;
 }
 
 void restartLines() {
-
 	String timestamp = year() + nf(month(),2) + nf(day(),2) + "-" + nf(hour(),2) + nf(minute(),2) + nf(second(),2);
 	saveFrame("frame/LineTree-"+ timestamp +"-"+ angleAll +"-#####.png");
 
-	//translucent hide of old lines
-	fill(255, 255/1.5);
-	rect(0, 0, width, height);
+	if( random(1) >= 0.5 ){
+		useVertex = true;
 
-	angleAll = random(180);
+	} else {
+		useVertex = false;
+	}
+	
+	endShape();
+
+	if(useVertex){
+		colorMode(HSB, 100);  // Use HSB with scale of 0-100
+		stroke(255);
+		strokeWeight(0.1);
+		beginShape(LINES);
+
+		//translucent hide of old lines
+		fill(0, 255/1.5);
+		rect(-1, -1, width+1, height+1);
+	} else {
+		colorMode(RGB, 255);
+		stroke(0);
+		strokeWeight(1);
+
+		//translucent hide of old lines
+		fill(255, 255/1.5);
+		rect(-1, -1, width+1, height+1);
+	}
+	
+	
+
+	angleAll = random(175);
 	growingLines = new ArrayList<GrowingLine>();
 	initialGrowingLine = new GrowingLine(new PVector(width/2, height/2), new PVector(random(2)-1, random(2)-1), 0, 100, null );
 	growingLines.add(initialGrowingLine);
@@ -62,6 +95,16 @@ void updateGrowingLines() {
 	ArrayList<GrowingLine> newLinesFromLines = new ArrayList<GrowingLine>();
 
 	int livingLinesCount = 0;
+
+	if(useVertex){
+		colorHue += 0.5;
+
+		if(colorHue>100){
+			colorHue -= 100;
+		}
+
+		stroke(colorHue, 100);
+	}
 
 	for (GrowingLine gLine : growingLines) {
 		gLine.update();
@@ -150,10 +193,6 @@ void findAndKillCollidingLines() {
 
 			//kill line if it hits another one
 			if(alphaDeg <= 90 && betaDeg <= 90 && hC <= .9) { //alphaDeg <= 90 && betaDeg <= 90 && hC <= .4
-				// println("---");
-				// println(alphaDeg +" "+ betaDeg);
-				// println("height: "+ hC);
-				// println("KILL!");
 				gLine.kill();
 			}
 		}

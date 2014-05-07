@@ -124,7 +124,13 @@ class GrowingLine {
 
 
   void display() {
-    line(oldPosVector.x, oldPosVector.y, newPosVector.x, newPosVector.y);
+
+    if(useVertex){
+      vertex(newPosVector.x, newPosVector.y);
+    } else {
+      line(oldPosVector.x, oldPosVector.y, newPosVector.x, newPosVector.y);
+    }
+    
   }
 }
 
