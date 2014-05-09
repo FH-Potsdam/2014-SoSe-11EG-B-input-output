@@ -21,7 +21,7 @@ Es wird nach jedem Punkt die Anweisung direkt umgesetzt.
 
 4. Am Schluss soll um alle Objekte (Nudeln) eine konvexe Hülle gezeichnet werden, sodass eine geschlossene Fläche generiert wurde, welche willkürlich aus geometrischen Flächen zusammengesetzt ist.
 
-###Phänotyp
+###Phänotypen
 ![](images/linesA-032.png)  
 ![](images/linesA-034.png)  
 ![](images/linesA-051.png)  
