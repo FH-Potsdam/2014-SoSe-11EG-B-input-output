@@ -10,7 +10,7 @@ int w, h; // for the size of the canvas
 ArrayList <PVector> points;
 void setup() {
 
-  table = loadTable("tobii-CSVExport-All-Data-noheader-nofilter.tsv", "header, tsv");
+  table = loadTable("rec05-data.tsv", "header, tsv");
   // get the size of the canvas from the MediaWidth and MediaHeight columns
   w = table.getInt(0, "MediaWidth");
   h = table.getInt(0, "MediaHeight");
@@ -43,6 +43,12 @@ ArrayList <PVector> getPoints (Table t) {
     // String number = row.getString("Number"); // get a string from the current row
     float x = row.getFloat("GazePointX"); // get a float from ...
     float y = row.getFloat("GazePointY"); // ...
+    if(x <= 0 || x > width){
+      continue;
+    }
+    if(y <= 0 || y > height){
+      continue;
+    }
     temp.add(new PVector(x, y));
   }
   return temp;
