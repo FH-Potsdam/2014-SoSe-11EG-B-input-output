@@ -1,3 +1,4 @@
 setup/auth.js
-build-tmp/*
+build-tmp/
 *.png
+*.pdf
