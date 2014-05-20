@@ -43,10 +43,10 @@ ArrayList <PVector> getPoints (Table t) {
     // String number = row.getString("Number"); // get a string from the current row
     float x = row.getFloat("GazePointX"); // get a float from ...
     float y = row.getFloat("GazePointY"); // ...
-    if(x <= 0 || x > width){
+    if(Float.isNaN(x) || x <= 0 || x > width){
       continue;
     }
-    if(y <= 0 || y > height){
+    if(Float.isNaN(y) || y <= 0 || y > height){
       continue;
     }
     temp.add(new PVector(x, y));
