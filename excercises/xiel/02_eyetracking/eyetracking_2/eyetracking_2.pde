@@ -28,7 +28,9 @@ void setup() {
 	}
 
 	//setup peasy cam
-	cam = new PeasyCam(this, width/2, height/2, 0, 250);
+	cam = new PeasyCam(this, width/2, height/2, 0, 600);
+	cam.rotateX(25);
+	cam.rotateY(90);
 	// cam.setMinimumDistance(50);
 	// cam.setMaximumDistance(500);
 
