@@ -11,12 +11,22 @@ Table table;
 ArrayList <PVector> pointsNegative;
 ArrayList <PVector> pointsPositive;
 
+boolean goFullscreen = true;
+
+boolean sketchFullScreen() {
+	return goFullscreen;
+}
+
 void setup() {
 
-	size(1280, 1024, P3D);
+	if(goFullscreen){
+		size(displayWidth, displayHeight, P3D);
+	} else {
+		size(1280, 1024, P3D);
+	}
 
 	//setup peasy cam
-	cam = new PeasyCam(this, width/2, height/2, 100, 250);
+	cam = new PeasyCam(this, width/2, height/2, 0, 250);
 	// cam.setMinimumDistance(50);
 	// cam.setMaximumDistance(500);
 
@@ -30,8 +40,6 @@ void setup() {
 
 	//get points from table (positive associations)
 	pointsPositive = getPoints(table);
-
-	
 }
 
 void draw() {
