@@ -1,10 +1,10 @@
-tobii_eyetracker !Animated!
+tobii_eyetracker !multiple!
 ================
 
 reading data from the tobii eyetracker with Processing used @FH-Potsdam  
-drawing them one by one  
+drawing multiple tables  
 
-![](tracker.gif)  
+![](../tracker.gif)  
 
 Copyright 2014 Fabian "fabiantheblind" Morón Zirfas & FH-Potsdam
 

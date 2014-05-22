@@ -5,11 +5,11 @@ reading data from the tobii eyetracker with Processing used @FH-Potsdam
 drawing them one by one.  
 
 ##Basic  
-![](tobii_eyetracker_processing_basic/tobii_eyetracker_processing_basic.png)  
+![](tobii_eyetracker_processing_basic.png)  
 ##Animated  
-![](tobii_eyetracker_processing_animated/tracker.gif)  
+![](tracker.gif)  
 ##Multiple Tables  
-![](tobii_eyetracker_processing_multiple/tracker-multiple.jpg)  
+![](tracker-multiple.jpg)  
 
 
 ##License  
