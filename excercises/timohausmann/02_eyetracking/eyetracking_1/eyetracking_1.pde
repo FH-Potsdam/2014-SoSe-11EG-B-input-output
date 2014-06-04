@@ -64,7 +64,7 @@ void draw() {
 
 /** 
  * createNodes
- * @param Table t 		Tabelle mit GazePointX, GazePointY, StimuliName
+ * @param Table t 		Tabelle mit GazePointX, GazePointY, Timestamp, StimuliName
  * @param String _media 	Dateiname, nach dem gefiltert werden soll
  */
 void createNodes(Table t, String _media) {
