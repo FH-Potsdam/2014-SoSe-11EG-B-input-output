@@ -1,23 +1,47 @@
+/*
+ * Eyetracking 1
+ * @version 1.0
+ * @author Timo Hausmann
+ * @license MIT
+ */
+
+String filename;
+String medianame;
+
 Table table;
 ArrayList <Node> nodes;
+
 int firstTimestamp;
 float playbackSpeed;
 
+
+/** 
+ * Setup
+ */
 void setup() {
 
-	playbackSpeed = 1;
+	playbackSpeed = 1; //Wiedergabegeschwindigkeit (Faktor), 1=normal 
+
+	filename = "Rec 02-All-Data.tsv";
+	//medianame = "01.Epic.gif";
+	medianame = "tumblr_n3wtbeYwAY1sr3eb2o1_500.jpg";
+	
+
 	nodes = new ArrayList<Node>();
 	
-	table = loadTable("../data/Rec 02-All-Data.tsv", "header, tsv");
-
+	table = loadTable("../data/" + filename, "header, tsv");
 	int w = table.getInt(0, "MediaWidth");
 	int h = table.getInt(0, "MediaHeight");
+	
 	size(w, h);
-
-	createNodes(table, "01.Epic.gif");
-	//createNodes(table, "tumblr_n3wtbeYwAY1sr3eb2o1_500.jpg");
+	createNodes(table, medianame);
 	
 }
+
+
+/** 
+ * Draw
+ */
 void draw() {
 
 	int currentTimestamp = millis();
@@ -38,7 +62,11 @@ void draw() {
 }
 
 
-
+/** 
+ * createNodes
+ * @param Table t 		Tabelle mit GazePointX, GazePointY, StimuliName
+ * @param String _media 	Dateiname, nach dem gefiltert werden soll
+ */
 void createNodes(Table t, String _media) {
 
 	int firstTimestamp = 0;
@@ -52,10 +80,7 @@ void createNodes(Table t, String _media) {
 		int timestamp = row.getInt("Timestamp");
 		String media = row.getString("StimuliName");
 
-		if( 	Float.isNaN(x) || x <= 0 || x > width ||
-			Float.isNaN(y) || y <= 0 || y > height ||
-			!media.equals(_media) ) {
-
+		if( !media.equals(_media) ) {
 			continue;
 		}
 
@@ -67,3 +92,29 @@ void createNodes(Table t, String _media) {
 	}
 }
 
+
+/** 
+ * Tastatureingaben
+ */
+void keyReleased() {
+
+	if (key != CODED) {
+		switch(key) {
+
+			case ENTER:
+
+				screenshot();
+				break;
+		}
+	}
+}
+
+
+/** 
+ * Screenshot erstellen
+ */
+void screenshot() {
+
+	String timestamp = year() + nf(month(),2) + nf(day(),2) + "-" + nf(hour(),2) + nf(minute(),2) + nf(second(),2);
+	saveFrame("screenshot-" + filename + "-" + medianame + "-" + timestamp + ".png");
+}

@@ -55,13 +55,11 @@ class Node {
 
 		if( !this.isAlive ) return;
 
-		int diameter = 7;
-
-		stroke(0, 0, 0, 72);
+		stroke(0, 0, 0, 128);
 		line(this.pos.x, this.pos.y, this.origPos.x, this.origPos.y);
 
-		fill(0, 0, 0, 128);
+		/*fill(0, 0, 0, 128);
 		noStroke();
-		ellipse(this.pos.x, this.pos.y, diameter, diameter);
+		ellipse(this.pos.x, this.pos.y, diameter, diameter);*/
 	}
 }
