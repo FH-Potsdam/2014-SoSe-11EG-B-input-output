@@ -28,11 +28,9 @@ void setup() {
 	}
 
 	//setup peasy cam
-	cam = new PeasyCam(this, width/2, height/2, 0, 600);
-	cam.rotateX(25);
+	cam = new PeasyCam(this, width/2, height/2, 0, 650);
+	cam.rotateX(0);
 	cam.rotateY(90);
-	// cam.setMinimumDistance(50);
-	// cam.setMaximumDistance(500);
 
 	//load table
 	table = loadTable("Rec-03-All-Data-neg.tsv", "header, tsv");
@@ -49,6 +47,8 @@ void setup() {
 void draw() {
 	background(120);
 	noStroke();
+
+	cam.rotateY(0.003);
 
 	//lights
 	lights();

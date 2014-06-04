@@ -26,9 +26,8 @@ void setup() {
 	}
 
 	//setup peasy cam
-	cam = new PeasyCam(this, width/2, height/2, 0, 250);
-	// cam.setMinimumDistance(50);
-	// cam.setMaximumDistance(500);
+	cam = new PeasyCam(this, width/2, height/2, 0, 400);
+	cam.setYawRotationMode();
 
 	//load table
 	table = loadTable("Rec-03-All-Data-neg.tsv", "header, tsv");
