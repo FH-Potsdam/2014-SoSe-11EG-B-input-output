@@ -36,6 +36,9 @@ void setup() {
 }
 
 
+/** 
+ * applyTolerance
+ */
 void applyTolerance() {
 
 	if( tolerance <= 0 ) return;
