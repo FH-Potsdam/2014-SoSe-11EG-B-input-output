@@ -1,6 +1,6 @@
 /*
  * Fractaltree
- * @version 1.0
+ * @version 1.1
  * @author Timo Hausmann
  * @license MIT
  * https://github.com/FH-Potsdam/2014-SoSe-11EG-B-input-output/tree/master/excercises/timohausmann/01_patternprocedure/
@@ -13,6 +13,7 @@ Tree myTree;
 int maxNameLength;
 String name;
 PFont font;
+PImage raster;
 float sceneRotation;
 float sceneRotationDelta;
 
@@ -37,6 +38,8 @@ void setup() {
 	
 	name = "";
 	font = createFont("Courier New", 16);
+	raster = loadImage("shadow.png");
+        textureMode(NORMAL);
 
 	randomSeed(1000);
 
@@ -50,17 +53,26 @@ void setup() {
 void draw() {
 
 	background(255);
-	lights();
+	
+	ambientLight(196, 196, 196);
+        directionalLight(128, 128, 128, 0, 1, 0);
 
 	translate(0, 400, 0);
 	rotateY( radians(sceneRotation) );
 
-	pushMatrix();
-	rotateX(PI/2);
-	stroke(64);
-	noFill();
-	rect(-400, -400, 800, 800);
-	popMatrix();
+	int size = 140;
+        int textureResolution = 1;
+        fill(128,128,128);
+        noStroke();
+        textureWrap(REPEAT);
+        beginShape(QUADS);
+		texture(raster);
+		vertex(-size, 0, -size, 0, 0);
+		vertex(size, 0, -size, textureResolution, 0);
+		vertex(size, 0, size, textureResolution, textureResolution);
+		vertex(-size, 0, size, 0, textureResolution);
+        endShape();
+
 
 	myTree.update();
 	myTree.paint();
