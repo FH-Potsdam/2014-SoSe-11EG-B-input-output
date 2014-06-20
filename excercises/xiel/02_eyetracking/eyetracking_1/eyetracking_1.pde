@@ -11,7 +11,7 @@ Table table;
 ArrayList <PVector> pointsNegative;
 ArrayList <PVector> pointsPositive;
 
-boolean goFullscreen = true;
+boolean goFullscreen = false ;
 
 boolean sketchFullScreen() {
 	return goFullscreen;

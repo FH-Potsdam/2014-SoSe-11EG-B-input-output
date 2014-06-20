@@ -13,7 +13,7 @@ ArrayList <PVector> pointsPositive;
 
 int currentMax = 0;
 
-boolean goFullscreen = false;
+boolean goFullscreen = true;
 
 boolean sketchFullScreen() {
 	return goFullscreen;
@@ -28,7 +28,7 @@ void setup() {
 	}
 
 	//setup peasy cam
-	cam = new PeasyCam(this, width/2, height/2, 0, 650);
+	cam = new PeasyCam(this, width/2, height/2, 0, 700);
 	cam.rotateX(0);
 	cam.rotateY(90);
 
