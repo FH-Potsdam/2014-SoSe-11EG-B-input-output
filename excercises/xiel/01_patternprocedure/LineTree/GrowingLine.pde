@@ -1,21 +1,10 @@
-
 /*
-line 
- 
- 
- desiredLength
- 
- dirVector / angle
- 
- newPosVector
- oldPosVector
- currentLength
- 
- ended
- - when line hits canvas edge
- - when line hits dark pixel
- - line reaches desired length
- 
+ * GrowingLine class
+ * by Felix Leupold (xiel)
+ * ------------------------------
+ * - a GrowingLine grows until it reaches it's desiredLength, then it ends (ended property)
+ * - a GrowingLine dies if it hits the edge of the canvas or another GrowingLine (dead property)
+ * - a GrowingLine gives birth to two new GrowingLines if it ends and is not dead
  */
 
 class GrowingLine {
