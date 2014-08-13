@@ -1,25 +1,25 @@
-##xx  
-
+##Track your eyes
+<br />
 Take a look ...
 
 ###Aufgabenbeschreibung
 Bei dieser Aufgabe haben wir mit den Mitteln des Eyetracking-Labores gearbeitet. Zu Beginn sollte jeder einen Text aussuchen, welchen er seinen Probanden im Eyetracking Labor zum Lesen gibt. Dieser war frei wählbar. Außerdem sollte dazu eine Leseanweisung formuliert werden, wie die Probanden den Text zu lesen haben. Diese Textanalyse mussten wir im Labor von mehreren Testperson ausführen lassen. Durch die Aufnahme ihrer Augenbewegungen beim Lesen wurden individuelle Illustrationen erzeugt.
 Aus Bild und Originaltext sollte nun eine klassisch gestaltete Bild-Textkombination in Form eines Plakates erstellt werden.
-
+<br />
 
 ###Umsetzungs-Variante01
 ![](images02/plakat02.png)
 *Zu lesender Text*
-
+<br />
 ![](images02/eyepat.v02-all.png)
 *Alle Lesepfade der Versuchspersonen*
-
+<br />
 ![](images02/eyepat.v02.all-02.png)
 *Beispiel für Illustration*
-
+<br />
 ![](images02/plakateA03_5.png)
 *Plakat Beispiel-01*
-
+<br />
 ![](images02/plakateA03_3.png)
 *Plakat Beispiel-02* 
 
@@ -27,11 +27,11 @@ Aus Bild und Originaltext sollte nun eine klassisch gestaltete Bild-Textkombinat
 ###Umsetzungs-Variante02
 ![](images02/20140603.png)  
 ![](images02/20140603-2.png)
-*Mikro-Perspektiven*
-
+*Mikro-Perspektive*
+<br />
 ![](images02/20140603-04.png)
 *Illustration für Schmuck*
-
+<br />
 ![](images02/20140603-3.png)
 *Illustration Beispiel-farbig*
 

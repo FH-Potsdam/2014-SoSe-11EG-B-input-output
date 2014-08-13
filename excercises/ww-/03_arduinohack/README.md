@@ -1,29 +1,29 @@
-##Data visualization by hacking a remote controlled car
-
+##Data visualization by hacking a remote controlled car 
+<br />
 Let's hack ...
-
 ###Aufgabenstellung
 Das Ziel dieses Projektes bestand darin eine physikalische, mechatronische Informationsvisualisierung der Besucherdaten der neuen FHP Website zu gestalten und zu realisieren. Es sollte physisch erfahrbare und interessante Art der Visualisierung der Information entstehen.
 
--INPUT-
+**INPUT** <br />
 Die Besucherdaten wurden über das Webanalyse-Tool PIWIK erhalten. Da aus Datenschutzgründen nicht die Rohdaten zur Verfügung gestellt werden konnten, wurden die Besucherdaten der FHP Website über ein von Fabian aufgesetztes Framework verteilt. Alle Teilnehmer haben also mit der selben Datengrundlage gearbeitet.
 
--OUTPUT-
-Die Gestaltungsaufgabe und Gestaltungsfreiheit/-herausforderung bestand in der Visualisierung der Ausgabe. Dabei sollten wir uns mit den Fragen auseinandersetzen, wie und mit welchen Materialien, Objekten und (gehackten) Geräten auf physische Art und Weise der Besuchertraffic einer Website dargestellt werden kann. Eine genaue Lesbarkeit der Information musste nicht erhalten bleiben, es sollte im Kern darum gehen, den Aspekt der Aktivität auf der Website durch physische Bewegung zu visualisieren.
-Für den physischen Output, also die Informationsvisualisierung haben wir auf der Grundlage von einem Readymade (ein ferngesteuertes Spielzeugauto) gearbeitet. In diesem Kontext bildete der RCC Hack das Hardware-Framework und lieferte uns auf einfache Weise:
+**OUTPUT** <br />
+Die Gestaltungsaufgabe und Gestaltungsfreiheit/-herausforderung bestand in der Visualisierung der Ausgabe. Dabei sollten wir uns mit den Fragen auseinandersetzen, wie und mit welchen Materialien, Objekten und (gehackten) Geräten auf physische Art und Weise der Besuchertraffic einer Website dargestellt werden kann. Eine genaue Lesbarkeit der Information musste nicht erhalten bleiben, es sollte im Kern darum gehen, den Aspekt der Aktivität auf der Website durch physische Bewegung zu visualisieren. <br />
+Für den physischen Output, also die Informationsvisualisierung haben wir auf der Grundlage von einem Readymade (ein ferngesteuertes Spielzeugauto) gearbeitet. <br />
+In diesem Kontext bildete der RCC Hack das Hardware-Framework und lieferte uns auf einfache Weise:
 
 1. Stromversorgung
 2. DC Motor (Drehbewegung vorwärts und rückwärts)
 3. An/Aus Pin mit der Möglichkeit, jedes elektronische Gerät oder jeden Aktuator daran anzuschliessen.
-4. Fernsteuerung bzw. Funkverbindung: Webdaten werden per Funk an das gehackte Auto gesendet.
+4. Fernsteuerung bzw. Funkverbindung: Webdaten werden per Funk an das gehackte Auto gesendet. 
 
 Die Logik ist dann:
-Besuchertraffic erhöht sich = Motor dreht vorwärts
-Besuchertraffic wird weniger = Motor dreht rückwärts
-Absolute Klicks auf der Website = an/aus Impuls auf Pin
-Das Projekt konnte auch ohne Arduino-Komponente bearbeitet werden, dann sollten die oben beschriebenen Möglichkeiten ausgereizt und versucht werden, einen kreativen sowie freien Umgang damit zu finden.
-Der Einsatz von Arduino ermöglichte es, die technischen Mittel noch zu erweitern.
-Abgeleitet von Quelle: https://incom.org/workspace/5122; 5. Juni 2014 um 13:27 Uhr; Monika Hoinkins
+
+* Besuchertraffic erhöht sich = Motor dreht vorwärts <br />
+* Besuchertraffic wird weniger = Motor dreht rückwärts <br />
+* Absolute Klicks auf der Website = an/aus Impuls auf Pin <br />
+
+*Abgeleitet von Quelle: https://incom.org/workspace/5122; 5. Juni 2014 um 13:27 Uhr; Monika Hoinkins*
 
 
 ###Konzept
@@ -52,11 +52,11 @@ Um nun den Protypen bei erhöhter Besucheranzahl wachsen und verminderten Besuch
 Aus diesem Grund musste das Konzept nochmals überarbeitet werden, sodass sich bei der Präsentation der Regler entweder zwischen der Mitte und der höchsten Stelle oder der Mitte und der niedrigsten Stelle des Potentiometers ohne Unterbrechungen bewegt hat. Folglich hat der Avatar bei erhöhtem Besuchertraffic in gleichmäßigen Intervallen sein maximales Volumen (ovaler Körper) angenommen. Dagegen kennzeichnete seine Form bei wenigeren Besuchen ein flaches Erscheinungsbild (plattgedrückter Körper).
 ![](images03/12021202.png)
 ![](images03/IMG_9322.png)
-*Aufbau Avatar mit Technik bei Präsention*
+*Aufbau Avatar mit Technik bei Präsentation*
 
 Bei der Präsentation hat leider mein Konzept nicht richtig funktioniert, da der Motor des Potentiometers zu schwach für den PET-Avatar war - was wir allerdings erst kurz vom Vorführen festgestellt haben. Als Notlösung habe ich dann das Gehäuse, in welchem sich Motor und Technikkomponenten befunden haben, aufgeschnitten, sodass das Publikum die Mechanik nachvollziehen und wenigstens die Bewegung des Reglers sehen konnte.
 
-![](IMAG1246-2.png)
+![](images03/IMAG1246-2.png)
 *FHP Web-Avatar*
   
 ###Weitere Aufnahmen
