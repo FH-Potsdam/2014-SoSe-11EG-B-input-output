@@ -13,6 +13,8 @@ In die Schuhe verbaut sind ein Arduino UNO, die Platine des ferngesteuerten Auto
 
 Die beiden „Walzen“ (Motoren von Fishertechnik) sind genau so platziert, dass sie die Schuhe sowohl nach vorne als auch nach hinten transportieren können.
 
+Trifft ein Signal ein, läuft jeder Schuh jeweils zwei Sekunden
+
 #### MIT License
 
 The MIT License (MIT)
