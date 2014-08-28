@@ -6,9 +6,9 @@ Hello my name is [jannisfeigl](https://github.com/jannisfeigl) and I'd like to s
 Durch kleine Änderungen im Programmiercode, entstehen schnell komplett neue Bilder beziehungsweise Animationen. 
 Ich wurde während des Programmierens häufig von den Auswirkungen dieser kleinen Veränderungen überrascht, da die Animation ab einer bestimmten Anzahl von Variablen und Textzeilen für einen Laien schnell unübersichtlich und schwer vorstellbar wird. Jedoch genau in diesem Spiel zwischen Zufall und Kontrolle bestand für mich die Spannung und der Reiz dieser Aufgabe.
 
-![Schreibmaschine](Images/schreibmaschine.jpg)! <br>
+![Schreibmaschine](Images/schreibmaschine.jpg) <br>
 
-![Translator](Images/translator.jpg)! <br>
+![Translator](Images/translator.jpg) <br>
 
 ####1. Projekt : _Processing Umsetzung_
 
@@ -20,9 +20,9 @@ Es war nicht einfach, die Entscheidung zu treffen, wann das Ziel, bzw. das gewü
 
 _Der dazugehörige Programmiercode:_
 
-*[Button_Sphere](Button_sphere/Button_sphere_finish_4_richtigfresh/Button_sphere_finish_4_richtigfresh.pde) <br>
+[Button_Sphere](Button_sphere/Button_sphere_finish_4_richtigfresh/Button_sphere_finish_4_richtigfresh.pde) <br>
 
-![Button_sphere](buttonsphere0499.jpg) <br>
+![Button_sphere](Images/buttonsphere0499.jpg) <br>
 
 
 ##2.Projekt : _Eyetracking_
@@ -58,11 +58,11 @@ _Der Dazugehörige Programmiercode:_
 Damit meine Seifenblasenmaschine die eingehenden Funkbefehle der Website in Seifenblasen übersetzen kann, musste ich die Signale, die in der Platine des Autos ankamen, mit dem Arduino Board auslesen und an Motor und Servo weiterschicken, gesteuert von einem Programmiercode.  
 Bei mehr Besuchern sollten größere Seifenblasen entstehen, sprich, die Bügel länger offen bleiben, damit mehr Luft in die Blase kommt. Bei weniger Besuchern eine entsprechend kürzere Öffnungszeit für kleinere Seifenblasen. Dieser Effekt sollte durch eine unterschiedliche Drehgeschwindigkeit des Motors noch verstärkt werden.  
 
-![Button_sphere](Images/ bubble_vagina.jpg) <br>
+![Button_sphere](Images/bubble_vagina.jpg) <br>
 
 
 _Der dazugehörige Programmiercode:_
 
-*[Button_Sphere](Bubble_box/Bubble_box.ino) <br>
+[Button_Sphere](Bubble_box/Bubble_box.ino) <br>
 
 
