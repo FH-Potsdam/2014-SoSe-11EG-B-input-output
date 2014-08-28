@@ -1,9 +1,12 @@
 /* 
- 
- * starte in der Mitte des Bildes
- * zeichne eine gerade Linie
- * am Ende der Linie entspringen zwei neue Linien
- * am Ende dieser Linien entspringen wieder neue Linien, usw. halte dabei den ursprünglichen Spreitzwinkel bei
+ * LineTree
+ * by Felix Leupold (xiel)
+ * ------------------------------
+ * - start with a line in center of canvas
+ * - draw a line
+ * - at the end of the line, two new lines arise
+ * - keep the spread angle constant
+ * - all lines share the same length
  */
 
 ArrayList<GrowingLine> growingLines;
@@ -11,9 +14,9 @@ ArrayList<GrowingLine> growingLines;
 GrowingLine initialGrowingLine;
 
 float angleAll;
+boolean activateVertexRandomly = false;
 boolean useVertex = false;
 boolean goFullscreen = false;
-
 float colorHue = 0;
 
 void setup() {
@@ -41,7 +44,7 @@ void restartLines() {
 	String timestamp = year() + nf(month(),2) + nf(day(),2) + "-" + nf(hour(),2) + nf(minute(),2) + nf(second(),2);
 	saveFrame("frame/LineTree-"+ timestamp +"-"+ angleAll +"-#####.png");
 
-	if( random(1) >= 0.5 ){
+	if( activateVertexRandomly && random(1) >= 0.5 ){
 		useVertex = true;
 
 	} else {
