@@ -74,7 +74,5 @@ Aus den Linien, Verdichtungen und typografischen Elementen ist ein Plakat entsta
 ![](Plakate/Plakat2_A4.pdf)
 
 ####Fazit
-Die Projektidee aus den Lesebewegungen von Probanden eine visuelle Darstellung für ein Plakat zu erstellen hat mir sehr gefallen. Die Umsetzung im Labor hingegen war zu Anfang eher mühsam, da das Programm oft abgestürzt ist und wir Aufnahmen nicht speichern konnten. 
-
-
+Die Projektidee, aus den Lesebewegungen von Probanden eine visuelle Darstellung für ein Plakat zu erstellen, hat mir sehr gefallen. Die Umsetzung im Labor hingegen war zu Anfang eher mühsam, da das Programm oft abgestürzt ist und wir die Aufnahmen nicht speichern konnten. Meine Idee, die Probanden über die Sätze "stolpern" zu lassen ist, den Bildern nach zu urteilen, nicht ganz aufgegangen. Trotzdem war es spannend, sich mit dem Prozess des "Eyetrackens" auseinanderzusetzen.
 
