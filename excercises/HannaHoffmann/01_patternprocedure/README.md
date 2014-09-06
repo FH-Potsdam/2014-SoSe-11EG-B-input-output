@@ -1,13 +1,22 @@
-######Hannas Readme.md  
+######Hannas Readme - Processing.md  
 
 # Generative Gestaltung
-### Dokumentation Pettern Procedure
+### Dokumentation "Pettern Procedure"
 
 [HannaHoffmann](https://github.com/HannaHoffmann).
 
+
+Generative Gestaltung beschreibt eine Gestaltungsform, bei der als Input ein Algorithmus benutzt wird, aus dem am Ende ein oder mehrere Kunstwerke entstehen.
+
+Als Einstieg in die Generative Gestaltung stellten wir uns die Frage: Welche Tätigkeiten unseres Alltags werden durch Algorithmen bestimmt? 
+
+Überraschender Weise stellten wir fest, dass es eine Menge Dinge in unserem Leben gibt, die einem ganz bestimmten Regelwerk unterliegen. Mein Beispiel war Schuhe binden: Ich greife mit je einer Hand nach einem Schnürsenkel, lege den einen über den anderen Senkel, bilde eine Schlaufe und ziehe sie fest. 
+
+Warum nicht auch mit solchen Algorithmen Bilder malen (lassen)?
+
 ##### **Analoge Anweisung**
 
-**Hier die Anweisung,also der "Genetischer Code", für ein zweidimensionales Muster: **
+**Der Genetische Code für ein zweidimensionales Muster:**
 
 
 
@@ -24,15 +33,18 @@
 6. Führe die "endlose" Gerade so lange weiter, bis die Fläche -deiner Meinung nach- voll ist.
 
 
-*Hier drei Beispiele der entstandenen Bildern:*
+*Drei Beispiele der entstandenen Bildern:*
 
 ![](images/Analog/DOC001.PDF)
 ![](images/Analog/DOC003.PDF)
 ![](images/Analog/DOC004.PDF)
 
+Spannend finde ich die Frage, wer bei diesem Prozess noch die Künstlerin ist: Ist es die Erfinderin des Regelwerkes oder die Person, die das Regelwerk ausführt und das Bild am Ende erschafft?
+
+
 #####**Processing Code**
 
-**Der "Genetische Code" sollte nun in einen Processing Code umgesetzt werden:**
+**Der Genetische Code wird nun in einen Processing Code umgesetzt:**
 
 	
 	float x; 
@@ -111,4 +123,11 @@ Leider ist es mir nicht gelungen, die Gerade abknicken zu lassen, wenn sie auf s
 ![](images/lines-01.jpg)  
 
 ##### **Anwendung des Musters**
+Ich habe eines der analog gestalteten Muster als Vorlage für ein Fisch-Mosaik benutzt, welches ich mit einem Linol Druck erstellt habe. Am Ende ist das Bild auf die Cover Seite des Magazins "Netzfischer" gekommen, dass ich in dem Kurs Editorial Design von Jutta Simson gestaltet habe.
+
+![](images/Fisch_Magazin_klein.jpg)
+
+#####**Fazit**
+Als Einstieg in die Generative Gestaltung hat mir das Projekt gut gefallen. Die analoge Arbeit hat mir viel Spaß gemacht. Mit Processing habe ich mich schwer getan, finde das Programm aber spannend und sehe die Perspektive die es für künftige Projekte haben kann. 
+
 
