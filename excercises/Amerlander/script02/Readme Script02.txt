@@ -1,0 +1,1 @@
+In diesem Script werden auf Mausklick Partikel erzeugt.
