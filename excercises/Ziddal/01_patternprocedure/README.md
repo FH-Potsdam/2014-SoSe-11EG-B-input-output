@@ -4,7 +4,7 @@ Jeder Buchstabe erzeugt eine Ellipse;
 
 Jeder Ellipse verbindet sich mit der nächste und generiert die Formen;
 
-Die Farbe sind eine Mischung von Zufall und der wert jeder Buchstabe nach ASCII code.
+Die Farbe sind eine Mischung aus zufällige Werte zwiechen 0 und 255 und der Wert jedes Buchstabe nach ASCII Code.
 
 ```sh
 import controlP5.*;
@@ -95,16 +95,7 @@ impLettere.addTextfield("name")
      
      
 }
-  
-
-  
-  
-
-
 void draw(){
-
-
 }
-
 
 ```
