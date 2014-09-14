@@ -1,5 +1,3 @@
-```sh
-
 
 /**
  * A simple sketch for reading tsv files created by the tobii eyetracker @FH-Potsdam
@@ -138,4 +136,4 @@ ArrayList <PVector> getFixPoints (Table t) {
   return temp;
 }
 
-```
+
