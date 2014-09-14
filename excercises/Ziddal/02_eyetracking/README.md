@@ -153,4 +153,8 @@ ArrayList <PVector> getFixPoints (Table t) {
 
 
 
+![] (https://cloud.githubusercontent.com/assets/7230814/4264131/3232301a-3c16-11e4-90b4-14d4866a648b.png)
 
+![] (https://cloud.githubusercontent.com/assets/7230814/4264132/3687717a-3c16-11e4-9f09-58fe1e85dc14.png)
+
+![] (https://cloud.githubusercontent.com/assets/7230814/4264135/4baddfee-3c16-11e4-9b45-d88700f9872b.png)
