@@ -1,1 +1,2 @@
-Hello my name is [ww-](https://github.com/ww-) and I'd like to say...
+Hey guys, <br />
+my name is [Wiebke](https://github.com/ww-), stuydy Interface Design and have started to play with code ;-)
