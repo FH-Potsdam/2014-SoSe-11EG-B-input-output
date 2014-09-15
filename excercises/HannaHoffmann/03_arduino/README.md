@@ -63,3 +63,4 @@ Ich bin sehr zufrieden mit meinem Objekt und habe es sogar, dank der Materialien
 Der gesamte Kurs hat mir, aufgrund der vielen Neuigkeiten und auch Schwierigkeiten, sehr gute gefallen. Grade im letzten Projekt ist mir klar geworden, dass man Design mit vielen Dingen vereinen kann. Ein Interface Studium ist durch den Kurs und natürlich durch Gespräche mit Kommilitonen für mich plötzlich vorstellbar geworden. Ich werde mich in den nächsten Semestern weiter in diesem Bereich versuchen.
 
 Ich möchte an dieser Stelle noch sagen, dass ich mich der Tod von Monika Hoinkis sehr traurig macht. Sie war eine motivierende und begeisternde Professorin, ich habe das Studium bei ihr sehr geschätzt. 
+
