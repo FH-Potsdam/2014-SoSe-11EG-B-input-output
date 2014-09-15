@@ -35,9 +35,9 @@ Warum nicht auch mit solchen Algorithmen Bilder malen (lassen)?
 
 *Drei Beispiele der entstandenen Bildern:*
 
-![](images/Analog/DOC001.PDF)
-![](images/Analog/DOC003.PDF)
-![](images/Analog/DOC004.PDF)
+![](images/Analog/DOC001.jpg)
+![](images/Analog/DOC003.jpg)
+![](images/Analog/DOC004.jpg)
 
 Spannend finde ich die Frage, wer bei diesem Prozess noch die Künstlerin ist: Ist es die Erfinderin des Regelwerkes oder die Person, die das Regelwerk ausführt und das Bild am Ende erschafft?
 
