@@ -14,7 +14,7 @@ Bei meiner Auswahl suchte ich nach bekannten Sätzen, die den Menschen in ihrem 
 
 Die Probanden sollten den Text im Labor laut vorlesen, um zu bewirken, dass sie den "Fehler" im Satz nicht überlesen.
 
-![](images/Apotheke_Erster_Versuch.pdf)
+![](images/Apotheke_Erster_Versuch.jpg)
 
 In der späteren Arbeit, fügte ich noch die Sätze: "Glückspiel kann schüchtern machen" und "Die gewünschte Gesprächspartnerin ist zur Zeit leider nicht erreichbar" hinzu.
 
@@ -67,11 +67,11 @@ Um die Daten in Bilder zu übersetzen musste ein Code geschrieben werden:
 		}
 	}
 	
-![](Plakate/Mit_Typo.pdf)
+![](Plakate/Mit_Typo.jpg)
 
 Aus den Linien, Verdichtungen und typografischen Elementen ist ein Plakat entstanden.
 
-![](Plakate/Plakat2_A4.pdf)
+![](Plakate/Plakat2_A4.jpg)
 
 ####Fazit
 Die Projektidee, aus den Lesebewegungen von Probanden eine visuelle Darstellung für ein Plakat zu erstellen, hat mir sehr gefallen. Die Umsetzung im Labor hingegen war zu Anfang eher mühsam, da das Programm oft abgestürzt ist und wir die Aufnahmen nicht speichern konnten. Meine Idee, die Probanden über die Sätze "stolpern" zu lassen ist, den Bildern nach zu urteilen, nicht ganz aufgegangen. Trotzdem war es spannend, sich mit dem Prozess des "Eyetrackens" auseinanderzusetzen.
