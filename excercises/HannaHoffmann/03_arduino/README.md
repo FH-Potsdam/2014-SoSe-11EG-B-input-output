@@ -21,7 +21,7 @@ Der Input für das Objekt waren drei Dinge:
 ######Konzept
 Meine Idee war es, verschieden farbigen Sand aus zwei Glasflaschen in einen Trichter laufen zu lassen, um die Entwicklung der Besucherzahlen zu visualisieren. Die an einem Holzgestell befestigten Glasflaschen, sollten durch einen mechatronischen Schließmechanismus mit der Entwicklung der Besucherzahlen korresponiderend geschlossen und geöffnet werden. So sollten verschieden farbige Sandschichten in einer Glasflasche entstehen, andenen man nachher den Traffic der Website von ca. einer Stunde ablesen könnte. 
 
-![](Konzept.pdf)
+![](Konzept.jpg)
 
 Zunächst beschäftigte ich mich mit dem Schließmechanismus für die beiden oberen Flaschen. Wie übersetzt man die Drehbewegung des Motors in eine Linearbewegung, um ein Schiebeelement unter den Flaschen zu bewegen?
 
