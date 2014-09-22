@@ -1,3 +1,18 @@
+
+»RCC HACK«
+Physical Information Design
+
+
+Das Projektziel ist eine physikalische, mechatronische Informationsvisualisierungder Besucherdatender neuen FHP Website.
+
+
+‘‘Herz_fh-potsdam.de’’
+
+Das ''Herz''  schlägt für jeder besucher der FHP Webseite.
+
+
+
+
 int pinffwd = A0;
 //Von Fabian
 
