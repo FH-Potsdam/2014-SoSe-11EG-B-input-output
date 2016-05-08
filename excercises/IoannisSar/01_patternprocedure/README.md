@@ -25,8 +25,6 @@ Unterscheiden.
 
 ###Enstandene Zeichnungen nach der Anweisung
 
-</br>
-
 ![pp_sketch_01](https://raw.githubusercontent.com/FH-Potsdam/2014-SoSe-11EG-B-input-output/master/excercises/IoannisSar/01_patternprocedure/02_images/pp_sketch_01.jpg)
 
 ![pp_sketch_03](https://raw.githubusercontent.com/FH-Potsdam/2014-SoSe-11EG-B-input-output/master/excercises/IoannisSar/01_patternprocedure/02_images/pp_sketch_02.jpg)
@@ -98,8 +96,6 @@ void keyPressed() {
 
 ###Screenshots
 
-</br>
-
 ![pp_processing_01](https://raw.githubusercontent.com/FH-Potsdam/2014-SoSe-11EG-B-input-output/master/excercises/IoannisSar/01_patternprocedure/02_images/pp_processing_01.jpg)
 
 ![pp_processing_02](https://raw.githubusercontent.com/FH-Potsdam/2014-SoSe-11EG-B-input-output/master/excercises/IoannisSar/01_patternprocedure/02_images/pp_processing_02.jpg)
@@ -117,13 +113,5 @@ Nachdem wir unseren Sketch digitalisiert hatten, folgte der finale Teil der Aufg
 
 ###Anwendung des Musters
 
-</br>
 
 ![pp_inuse_01](https://raw.githubusercontent.com/FH-Potsdam/2014-SoSe-11EG-B-input-output/master/excercises/IoannisSar/01_patternprocedure/02_images/pp_inuse_01.jpg)
-
-
-
-
-
-
-
